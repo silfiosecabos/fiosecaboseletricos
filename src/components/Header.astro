@@ -1,0 +1,89 @@
+---
+const whatsappLink = "https://wa.me/5511967591991?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!";
+---
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo da sil.jpg" alt="SIL Fios e Cabos Logo" height="50"> 
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#vantagens">Vantagens</a></li>
+        <li><a href={whatsappLink} target="_blank" class="cta-button">Orçamento</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .logo img {
+    display: block; 
+    height: 50px; 
+    width: auto; 
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: var(--accent);
+  }
+
+  .cta-button {
+    background-color: var(--accent);
+    color: var(--black);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .cta-button:hover,
+  .cta-button:focus {
+    background-color: var(--accent-dark);
+    color: var(--white);
+  }
+</style>

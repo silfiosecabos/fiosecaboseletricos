@@ -1,0 +1,481 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RegistrationForm from '../components/RegistrationForm.astro';
+
+// Link do WhatsApp definido aqui ou importado de um arquivo de configuração
+const whatsappLink = "https://wa.me/5511967591991?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!";
+---
+
+<Layout title="SIL Fios e Cabos - Distribuição Direta">
+	<section id="hero-banner">
+		<div class="banner-content">
+			<h1>Distribuição Direta de Fios e Cabos Certificados</h1>
+			<h2>10% OFF para CNPJ + Frete Grátis para Todo o Brasil!</h2>
+			<a href="#orcamento-cadastro" class="cta-button-hero">
+				Solicite seu Orçamento Agora
+			</a>
+		</div>
+	</section>
+
+	<section id="vantagens">
+		<div class="container">
+			<div class="vantagem-item">
+				<img src="/images/icone qualidade garantida.jpg" alt="Ícone Qualidade" width="60" height="60"> 
+				<h3>Qualidade Garantida</h3>
+				<p>Produtos certificados e inspecionados.</p>
+			</div>
+			<div class="vantagem-item">
+				<img src="/images/icone entrega rapida.jpg" alt="Ícone Entrega Rápida" width="60" height="60"> 
+				<h3>Entrega Rápida</h3>
+				<p>Agilidade no envio para todo o Brasil.</p>
+			</div>
+			<div class="vantagem-item">
+				<img src="/images/icone mais de 20 produtos.jpg" alt="Ícone Catálogo Amplo" width="60" height="60"> 
+				<h3>+20 Produtos Certificados</h3>
+				<p>Variedade para sua necessidade.</p>
+			</div>
+			<div class="vantagem-item">
+				<img src="/images/icone atendimento especializado.jpg" alt="Ícone Atendimento" width="60" height="60"> 
+				<h3>Atendimento Especializado</h3>
+				<p>Para obras, comércios e indústrias.</p>
+			</div>
+		</div>
+	</section>
+
+	<RegistrationForm id="orcamento-cadastro" />
+
+	<section id="produtos">
+		<div class="container">
+			<h2>Nossa Linha de Produtos</h2>
+			<img src="/images/fios-cores rolos de 100 metros.jpg" alt="Rolos de fios SIL coloridos" class="img-destaque-produto">
+			<img src="/images/rolos e bitolas.webp" alt="Diversas bitolas de cabos SIL" class="img-destaque-produto" style="margin-top: 1.5rem;">
+
+			<div class="catalogo-grid">
+				<!-- Exemplo de Item de Produto - Repetir conforme necessário -->
+				<div class="produto-item">
+					<img src="/produtos/cabo-flexivel.jpg" alt="Cabo Flexível SIL" loading="lazy"> 
+					<h3>Cabo Flexível SIL</h3>
+					<p>Ideal para instalações residenciais e comerciais.</p>
+				</div>
+				<div class="produto-item">
+					<img src="/produtos/cabo-rigido.jpg" alt="Cabo Rígido SIL" loading="lazy"> 
+					<h3>Cabo Rígido SIL</h3>
+					<p>Para instalações fixas e embutidas.</p>
+				</div>
+				<div class="produto-item">
+					<img src="/produtos/cabo-pp.jpg" alt="Cabo PP SIL" loading="lazy"> 
+					<h3>Cabo PP SIL</h3>
+					<p>Resistente e versátil para diversas aplicações.</p>
+				</div>
+				<div class="produto-item">
+					<img src="/produtos/fio-solido.jpg" alt="Fio Sólido SIL" loading="lazy"> 
+					<h3>Fio Sólido SIL</h3>
+					<p>Utilizado em quadros de distribuição.</p>
+				</div>
+				<!-- Adicionar mais produtos aqui -->
+			</div>
+			<a href="/produtos/catalogo sil fios e cabos.html" target="_blank" class="btn-catalogo">
+				Ver Catálogo Completo
+			</a>
+			<img src="/images/noticia-atoxsil-eco.jpg" alt="Banner SIL Atox Eco - Produto Ecológico" class="img-destaque-produto" style="margin-top: 3rem;">
+		</div>
+	</section>
+
+	<section id="depoimentos">
+		<div class="container">
+			<h2>O que nossos Clientes Dizem</h2>
+			<div class="depoimento-grid">
+				<!-- Exemplo de Depoimento 1 -->
+				<div class="depoimento-item">
+					<img src="/images/cliente1-placeholder.jpg" alt="Foto Cliente 1" width="80" height="80"> 
+					<blockquote>
+						"Excelente atendimento e produtos de altíssima qualidade. A entrega foi muito rápida! Recomendo a SIL Fios e Cabos para todos os projetos."
+					</blockquote>
+					<cite>– João Silva, Engenheiro Eletricista</cite>
+				</div>
+				<!-- Exemplo de Depoimento 2 -->
+				<div class="depoimento-item">
+					<img src="/images/cliente2-placeholder.jpg" alt="Foto Cliente 2" width="80" height="80"> 
+					<blockquote>
+						"Conseguimos ótimos preços para nossa obra comprando direto com a SIL. O desconto para CNPJ fez toda a diferença no orçamento."
+					</blockquote>
+					<cite>– Maria Oliveira, Construtora XYZ</cite>
+				</div>
+				<!-- Adicionar mais depoimentos se necessário -->
+			</div>
+		</div>
+	</section>
+
+	<section id="cta-final">
+		<div class="container">
+			<h2>Pronto para garantir os melhores fios e cabos para seu projeto?</h2>
+			<p>Fale agora mesmo com um de nossos consultores especializados e solicite seu orçamento com condições especiais.</p>
+			<a href={whatsappLink} target="_blank" class="cta-button-final">
+				<img src="/images/whatsapp-white.svg" alt="WhatsApp Icon" width="24" height="24" style="vertical-align: middle; margin-right: 8px;"> 
+				Clique para Falar com um Consultor Agora
+			</a>
+		</div>
+	</section>
+
+	<!-- Outras seções virão aqui -->
+
+</Layout>
+
+<style>
+	/* As variáveis :root foram removidas daqui pois já estão em Layout.astro */
+
+	html {
+		font-family: var(--font-sans);
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding-top: 80px; /* Espaço para o header fixo, ajustar se a altura do header mudar */
+		background-color: #f9f9f9;
+		color: var(--gray-dark);
+	}
+
+	a {
+		color: var(--accent-dark);
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* --- Estilos Hero Banner --- */
+	#hero-banner {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/dentro da fabrica.jpg');
+		background-size: cover;
+		background-position: center;
+		color: var(--white);
+		text-align: center;
+		padding: 6rem 1rem; /* Aumentar padding */
+		min-height: 40vh; /* Altura mínima */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#hero-banner h1 {
+		font-size: 2.8rem;
+		margin-bottom: 1rem;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+	}
+
+	.cta-button-hero {
+		background-color: var(--accent);
+		color: var(--black);
+		padding: 1rem 2.5rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1.1rem;
+		font-weight: 700;
+		transition: background-color 0.3s ease, transform 0.2s ease;
+		display: inline-block;
+	}
+
+	.cta-button-hero:hover,
+	.cta-button-hero:focus {
+		background-color: var(--accent-dark);
+		color: var(--white);
+		transform: scale(1.05);
+	}
+
+	/* Ajustes responsivos */
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.2rem;
+		}
+		h2 {
+			font-size: 1.2rem;
+		}
+		#hero-banner {
+			padding: 8rem 1rem 6rem;
+			min-height: 60vh;
+		}
+		.cta-button-hero {
+			padding: 0.8rem 2rem;
+			font-size: 1rem;
+		}
+	}
+
+	/* --- Estilos Seção Vantagens --- */
+	#vantagens {
+		padding: 4rem 1rem;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/dentro da fabrica.jpg');
+		background-size: cover;
+		background-position: center;
+		position: relative; /* Para o overlay, se necessário */
+	}
+
+	#vantagens .container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Grid responsivo */
+		gap: 2rem;
+		text-align: center;
+	}
+
+	.vantagem-item {
+		padding: 1.5rem;
+		background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		/* z-index: 1; Para garantir que fique acima do pseudo-elemento de overlay se usado */
+	}
+
+	.vantagem-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+
+	.vantagem-item img {
+		margin-bottom: 1rem;
+		/* Opcional: Aplicar cor do tema aos ícones SVG */
+		/* filter: invert(78%) sepia(61%) saturate(4872%) hue-rotate(3deg) brightness(104%) contrast(103%); */
+	}
+
+	.vantagem-item h3 {
+		font-size: 1.2rem;
+		color: var(--black); /* Mantido preto, pois o card tem fundo claro */
+		margin-bottom: 0.5rem;
+	}
+
+	.vantagem-item p {
+		font-size: 0.95rem;
+		color: var(--gray-dark); /* Mantido cinza escuro */
+		line-height: 1.5;
+	}
+
+	/* --- Estilos Seção Produtos --- */
+	#produtos {
+		padding: 4rem 1rem;
+		text-align: center;
+	}
+
+	#produtos .container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	#produtos h2 {
+		font-size: 2rem;
+		color: var(--black);
+		margin-bottom: 1.5rem; /* Reduzido para acomodar imagem */
+	}
+
+	.img-destaque-produto {
+		display: block;
+		max-width: 700px; /* Limita largura máxima */
+		width: 90%; /* Responsivo */
+		margin: 2rem auto; /* Centraliza e adiciona margem vertical */
+		border-radius: 8px;
+		box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+	}
+
+	.catalogo-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.produto-item {
+		background-color: var(--white);
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+		overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		text-align: left;
+	}
+
+	.produto-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+
+	.produto-item img {
+		width: 100%;
+		height: 200px; /* Altura fixa para as imagens */
+		object-fit: cover; /* Cobre o espaço sem distorcer */
+		display: block;
+	}
+
+	.produto-item h3 {
+		font-size: 1.1rem;
+		color: var(--black);
+		margin: 1rem 1rem 0.5rem;
+	}
+
+	.produto-item p {
+		font-size: 0.9rem;
+		color: var(--gray-dark);
+		margin: 0 1rem 1rem;
+		line-height: 1.4;
+	}
+
+	.btn-catalogo {
+		display: inline-block;
+		background-color: var(--accent);
+		color: var(--black);
+		padding: 0.8rem 2rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.btn-catalogo:hover,
+	.btn-catalogo:focus {
+		background-color: var(--accent-dark);
+		color: var(--white);
+	}
+
+	/* --- Estilos Seção Depoimentos --- */
+	#depoimentos {
+		padding: 4rem 1rem;
+		background-color: #f0f0f0; /* Um cinza ligeiramente diferente para contraste */
+		text-align: center;
+	}
+
+	#depoimentos .container {
+		max-width: 1000px; /* Um pouco mais estreito para foco nos depoimentos */
+		margin: 0 auto;
+	}
+
+	#depoimentos h2 {
+		font-size: 2rem;
+		color: var(--black);
+		margin-bottom: 3rem;
+	}
+
+	.depoimento-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.depoimento-item {
+		background-color: var(--white);
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+		text-align: center;
+	}
+
+	.depoimento-item img {
+		border-radius: 50%; /* Foto redonda */
+		margin-bottom: 1.5rem;
+		border: 3px solid var(--accent);
+	}
+
+	.depoimento-item blockquote {
+		font-size: 1.05rem;
+		color: var(--gray-dark);
+		margin: 0 0 1.5rem 0;
+		font-style: italic;
+		line-height: 1.6;
+		position: relative;
+		padding: 0 1rem; /* Espaço para as aspas */
+	}
+
+	/* Adicionando aspas estilizadas (opcional) */
+	.depoimento-item blockquote::before,
+	.depoimento-item blockquote::after {
+		content: '"';
+		font-size: 2.5rem;
+		color: var(--gray-light);
+		position: absolute;
+		opacity: 0.8;
+	}
+
+	.depoimento-item blockquote::before {
+		left: -0.5rem;
+		top: -0.5rem;
+	}
+
+	.depoimento-item blockquote::after {
+		right: -0.5rem;
+		bottom: -1rem;
+	}
+
+	.depoimento-item cite {
+		font-weight: 600;
+		color: var(--black);
+		font-style: normal;
+	}
+
+	/* --- Estilos Seção CTA Final --- */
+	#cta-final {
+		padding: 5rem 1rem;
+		background-color: var(--accent); /* Fundo amarelo chamativo */
+		background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('/images/cta-bg-placeholder.jpg'); /* Opcional: Fundo com textura + overlay */
+		background-size: cover;
+		background-position: center;
+		text-align: center;
+		color: var(--black); /* Texto escuro para contraste com amarelo */
+	}
+
+	#cta-final .container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	#cta-final h2 {
+		font-size: 2.2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	#cta-final p {
+		font-size: 1.1rem;
+		margin-bottom: 2.5rem;
+		line-height: 1.6;
+	}
+
+	.cta-button-final {
+		display: inline-block;
+		background-color: var(--black); /* Botão preto */
+		color: var(--white); /* Texto branco */
+		padding: 1rem 3rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-weight: 700;
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+
+	.cta-button-final:hover,
+	.cta-button-final:focus {
+		background-color: #333; /* Preto um pouco mais claro no hover */
+		transform: scale(1.05);
+	}
+
+	/* Ajustes Responsivos CTA Final */
+	@media (max-width: 768px) {
+		#cta-final h2 {
+			font-size: 1.8rem;
+		}
+		#cta-final p {
+			font-size: 1rem;
+		}
+		.cta-button-final {
+			padding: 0.8rem 2rem;
+			font-size: 1.1rem;
+		}
+	}
+
+</style>

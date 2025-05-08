@@ -1,0 +1,65 @@
+---
+interface Props {
+	title: string;
+}
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Distribuição Direta de Fios e Cabos Certificados SIL. 10% OFF para CNPJ e Frete Grátis para todo o Brasil." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<style>
+			/* Global styles */
+			:root {
+				--sil-blue: #0D79BE; /* Azul SIL */
+				--sil-orange: #F7941D; /* Laranja SIL */
+				--accent: var(--sil-orange); /* Cor de destaque principal agora é Laranja SIL */
+				--accent-dark: #E08000; /* Laranja SIL mais escuro */
+				--black: #111;
+				--gray: #888;
+				--gray-light: #ccc;
+				--gray-dark: #333;
+				--white: #fff;
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background: #fff;
+				background-size: 224px;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				line-height: 1.6;
+				color: var(--gray-dark);
+				background-color: var(--white);
+			}
+
+			a {
+				color: inherit; /* Remove default blue link color */
+				text-decoration: none; /* Remove underline */
+			}
+
+			/* Adicionar mais estilos globais ou importar um arquivo CSS global aqui */
+		</style>
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
+	</body>
+</html>

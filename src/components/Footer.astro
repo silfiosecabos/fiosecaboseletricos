@@ -1,0 +1,119 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h4>Contato</h4>
+        <p>Endereço: Seu Endereço Completo Aqui, Cidade - UF, CEP</p>
+        <p>Telefone: (11) 96759-1991</p>
+        <p>Email: contato@silfiosecabos.com.br</p>
+        <p>CNPJ: XX.XXX.XXX/0001-XX</p>
+      </div>
+      <div class="social-media">
+        <h4>Siga-nos</h4>
+        <ul>
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; {currentYear} SIL Fios e Cabos. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--black);
+    color: var(--gray-light);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem; /* Add space above the footer */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info, .social-media {
+    flex: 1;
+    min-width: 250px; /* Ensure minimum width */
+  }
+
+  h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-media li {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-media a {
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-media a:hover,
+  .social-media a:focus {
+    color: var(--accent);
+  }
+
+  .copyright {
+    text-align: center;
+    border-top: 1px solid var(--gray-dark);
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+
+  /* Responsive adjustments if needed */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center; /* Center content on smaller screens */
+      text-align: center;
+    }
+
+    .contact-info, .social-media {
+      min-width: auto;
+      width: 100%; /* Take full width */
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+       display: block; /* Make headings block level */
+       border-bottom: none;
+       margin-bottom: 0.5rem;
+    }
+  }
+</style>
